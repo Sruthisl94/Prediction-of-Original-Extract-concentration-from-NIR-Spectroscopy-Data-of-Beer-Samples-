@@ -40,7 +40,7 @@ Load the dataset and check for missing values.
 ### 6.Building a Machine Learning Pipeline
 A pipeline is created to streamline the entire process:
 
-* Savitzky-Golay filtering (smoothing & differentiation)
+* Savitzky-Golay filtering for smoothing & then differentiation
 * Standardization (scaling the spectral data)
 * Principal Component Analysis (PCA)
 * PLS regression model
