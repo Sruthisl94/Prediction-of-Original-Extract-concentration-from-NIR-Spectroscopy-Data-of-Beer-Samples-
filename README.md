@@ -1,5 +1,5 @@
 ## Title:
-Machine Learning approach for the prediction of original extract concentration from Near Infrared Spectroscopy Data of Beer Samples
+Machine Learning approach for predicting Original extract concentration from Near-Infrared Spectroscopy of Beer Samples
 ## Objective:
 This project aims to develop a machine learning-based model to predict the original extract (gravity) of beer using Near-Infrared (NIR) spectroscopy data. The original extract concentration is a crucial quality parameter in the brewing industry, as it indicates the substrate potential for yeast fermentation and serves as a taxation parameter. By leveraging NIR spectral data and chemometric techniques, this project builds a predictive model to estimate the extract concentration accurately, enabling real-time quality control and process optimization in brewing.
 ## Datasets:
