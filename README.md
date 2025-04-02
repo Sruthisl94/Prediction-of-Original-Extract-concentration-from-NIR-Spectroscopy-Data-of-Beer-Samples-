@@ -56,8 +56,8 @@ The trained pipeline was saved using joblib as NIR_model.pkl, allowing it to be 
 ## Results :<br>
 Model Performance:<br>
 
-Mean Squared Error (MSE): 0.0382
-R² Score: 0.9387
+* Mean Squared Error (MSE): 0.0382
+* R² Score: 0.9387
 
 ### Technologies Used<br>
 Python Libraries:<br>
