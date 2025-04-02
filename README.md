@@ -15,39 +15,30 @@ The dataset includes:
 Load the dataset and check for missing values.
 
 ### 2. Exploratory Data Analysis (EDA)
-Spectral Analysis: Visualizing raw spectra to observe absorbance patterns.
-
-Power Spectral Density (PSD) Analysis: Identifying noise components in spectral data.
-
-Statistical Insights: Understanding the distribution of original extract values.
+* Spectral Analysis: Visualizing raw spectra to observe absorbance patterns.
+* Power Spectral Density (PSD) Analysis: Identifying noise components in spectral data.
+* Statistical Insights: Understanding the distribution of original extract values.
 
 ### 3. Filtering & Noise Reduction
-Apply Savitzky-Golay filter for smoothing and differentiation.
-
-Investigate the effects of filtering on spectral data.
+* Apply Savitzky-Golay filter for smoothing and differentiation.
+* Investigate the effects of filtering on spectral data.
 
 ### 4. Dimensionality Reduction
-Use Principal Component Analysis (PCA) to reduce high-dimensional spectral data.
-
-Retain components explaining 95% variance for efficient feature extraction.
+* Use Principal Component Analysis (PCA) to reduce high-dimensional spectral data.
+* Retain components explaining 95% variance for efficient feature extraction.
 
 ### 5. Model Building - Partial Least Squares (PLS) Regression
-Train a PLS regression model, which is well-suited for spectroscopy data.
-
-Evaluate performance using Mean Squared Error (MSE) and R² Score.
-
-Analyze PLS regression coefficients to identify significant wavelengths.
+* Train a PLS regression model, which is well-suited for spectroscopy data.
+* Evaluate performance using Mean Squared Error (MSE) and R² Score.
+* Analyze PLS regression coefficients to identify significant wavelengths.
 
 ### 6.Building a Machine Learning Pipeline
 A pipeline is created to streamline the entire process:
 
-Savitzky-Golay filtering (smoothing & differentiation)
-
-Standardization (scaling the spectral data)
-
-Principal Component Analysis (PCA)
-
-PLS regression model
+* Savitzky-Golay filtering (smoothing & differentiation)
+* Standardization (scaling the spectral data)
+* Principal Component Analysis (PCA)
+* PLS regression model
 
 This pipeline ensures that new data follows the same preprocessing steps as the training data before making predictions.
 
