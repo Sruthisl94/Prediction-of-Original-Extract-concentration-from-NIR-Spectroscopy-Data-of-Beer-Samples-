@@ -1,1 +1,87 @@
-# Prediction-of-Original-Extract-concentration-from-NIR-Spectroscopy-Data-of-Beer-Samples-
+## Title:
+Machine Learning approcch for the prediction of original extract concentration from Near Infrared Spectroscopy Data of Beer Samples
+## Objective:
+This project aims to develop a machine learning-based model to predict the original extract (gravity) of beer using Near-Infrared (NIR) spectroscopy data. The original extract concentration is a crucial quality parameter in the brewing industry, as it indicates the substrate potential for yeast fermentation and serves as a taxation parameter. By leveraging NIR spectral data and chemometric techniques, this project builds a predictive model to estimate the extract concentration accurately, enabling real-time quality control and process optimization in brewing.
+## Datasets:
+The dataset used in this project is sourced from Kaggle and contains Near-Infrared (NIR) spectroscopy data for beer samples.<br>
+https://www.kaggle.com/datasets/robertoschimmenti/beer-nir/data <br>
+The dataset includes:
+* Wavelengths (1100–2500 nm, step size 2 nm): Representing the absorbance spectra of beer samples.
+* Original Extract Concentration (% Plato): The target variable, indicating the sugar content before fermentation.
+* 80 Samples: With 576 spectral features per sample, corresponding to different wavelengths.
+
+## Project Workflow
+### 1. Data Preprocessing
+Load the dataset and check for missing values.
+
+### 2. Exploratory Data Analysis (EDA)
+Spectral Analysis: Visualizing raw spectra to observe absorbance patterns.
+
+Power Spectral Density (PSD) Analysis: Identifying noise components in spectral data.
+
+Statistical Insights: Understanding the distribution of original extract values.
+
+### 3. Filtering & Noise Reduction
+Apply Savitzky-Golay filter for smoothing and differentiation.
+
+Investigate the effects of filtering on spectral data.
+
+### 4. Dimensionality Reduction
+Use Principal Component Analysis (PCA) to reduce high-dimensional spectral data.
+
+Retain components explaining 95% variance for efficient feature extraction.
+
+### 5. Model Building - Partial Least Squares (PLS) Regression
+Train a PLS regression model, which is well-suited for spectroscopy data.
+
+Evaluate performance using Mean Squared Error (MSE) and R² Score.
+
+Analyze PLS regression coefficients to identify significant wavelengths.
+
+### 6.Building a Machine Learning Pipeline
+A pipeline is created to streamline the entire process:
+
+Savitzky-Golay filtering (smoothing & differentiation)
+
+Standardization (scaling the spectral data)
+
+Principal Component Analysis (PCA)
+
+PLS regression model
+
+This pipeline ensures that new data follows the same preprocessing steps as the training data before making predictions.
+
+### 7. Testing on Unseen Data
+The model was tested on unseen data, which consists of the first 6 rows of the original dataset. This was done to validate the performance of the trained pipeline in predicting the original extract concentration.
+
+### 8. Saving the Model
+The trained pipeline was saved using joblib, allowing it to be used for future predictions without retraining.
+
+Technologies Used
+Python Libraries:
+
+pandas, numpy (Data Processing)
+
+matplotlib, seaborn (Visualization)
+
+scipy.signal (Savitzky-Golay Filtering)
+
+sklearn.decomposition (PCA)
+
+sklearn.cross_decomposition (PLS Regression)
+
+sklearn.pipeline (Machine Learning Pipeline)
+
+joblib (Model Saving & Loading)
+
+## Results 
+
+Future Work
+Implement real-time monitoring system for brewery production.
+
+Compare PLS regression with neural networks for improved accuracy.
+
+Explore advanced denoising techniques for better signal processing.
+
+Contributions
+Feel free to contribute! If you find a bug or want to improve the model, open an issue or submit a pull request.
