@@ -23,9 +23,10 @@ Load the dataset and check for missing values.
 * Power Spectral Density (PSD) Analysis: Identifying noise components in spectral data.
 * Statistical Insights: Understanding the distribution of original extract values.
 
-### 3. Filtering & Noise Reduction
-* Apply Savitzky-Golay filter for smoothing and differentiation.
+### 3. Filtering and Noise Reduction 
+* Apply Savitzky-Golay filter for smoothing.
 * Investigate the effects of filtering on spectral data.
+* Calculate the first derivative of spectra inorder to remove baseline shifts and facilitates qualitative analysis by highlighting subtle differences in the spectra.
 
 ### 4. Dimensionality Reduction
 * Use Principal Component Analysis (PCA) to reduce high-dimensional spectral data.
