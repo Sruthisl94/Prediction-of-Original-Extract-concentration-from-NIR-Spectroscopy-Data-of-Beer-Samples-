@@ -1,5 +1,5 @@
 ## Title:
-Machine Learning approcch for the prediction of original extract concentration from Near Infrared Spectroscopy Data of Beer Samples
+Machine Learning approach for the prediction of original extract concentration from Near Infrared Spectroscopy Data of Beer Samples
 ## Objective:
 This project aims to develop a machine learning-based model to predict the original extract (gravity) of beer using Near-Infrared (NIR) spectroscopy data. The original extract concentration is a crucial quality parameter in the brewing industry, as it indicates the substrate potential for yeast fermentation and serves as a taxation parameter. By leveraging NIR spectral data and chemometric techniques, this project builds a predictive model to estimate the extract concentration accurately, enabling real-time quality control and process optimization in brewing.
 ## Datasets:
@@ -52,36 +52,32 @@ PLS regression model
 This pipeline ensures that new data follows the same preprocessing steps as the training data before making predictions.
 
 ### 7. Testing on Unseen Data
-The model was tested on unseen data, which consists of the first 6 rows of the original dataset. This was done to validate the performance of the trained pipeline in predicting the original extract concentration.
+The model was tested on unseen data (unseen_NIR), which consists of the first 6 rows of the original dataset. This was done to validate the performance of the trained pipeline in predicting the original extract concentration.
 
 ### 8. Saving the Model
-The trained pipeline was saved using joblib, allowing it to be used for future predictions without retraining.
+The trained pipeline was saved using joblib as NIR_model.pkl, allowing it to be used for future predictions without retraining.
 
-Technologies Used
-Python Libraries:
+## Results :<br>
+Model Performance:<br>
 
-pandas, numpy (Data Processing)
+Mean Squared Error (MSE): 0.0382
+R² Score: 0.9387
 
-matplotlib, seaborn (Visualization)
+### Technologies Used<br>
+Python Libraries:<br>
 
-scipy.signal (Savitzky-Golay Filtering)
+* pandas, numpy (Data Processing)
+* matplotlib, seaborn (Visualization)
+* scipy.signal (Savitzky-Golay Filtering)
+* sklearn.decomposition (PCA)
+* sklearn.cross_decomposition (PLS Regression)
+* sklearn.pipeline (Machine Learning Pipeline)
+* joblib (Model Saving & Loading)
 
-sklearn.decomposition (PCA)
+### Future Work
+* Implement real-time monitoring system for brewery production.
+* Compare PLS regression with neural networks for improved accuracy.
+* Explore advanced denoising techniques for better signal processing.
 
-sklearn.cross_decomposition (PLS Regression)
-
-sklearn.pipeline (Machine Learning Pipeline)
-
-joblib (Model Saving & Loading)
-
-## Results 
-
-Future Work
-Implement real-time monitoring system for brewery production.
-
-Compare PLS regression with neural networks for improved accuracy.
-
-Explore advanced denoising techniques for better signal processing.
-
-Contributions
+## Contributions
 Feel free to contribute! If you find a bug or want to improve the model, open an issue or submit a pull request.
