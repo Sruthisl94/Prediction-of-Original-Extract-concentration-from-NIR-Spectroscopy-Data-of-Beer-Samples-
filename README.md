@@ -1,13 +1,17 @@
 ## Title:
 Machine Learning approach for predicting Original extract concentration from Near-Infrared Spectroscopy of Beer Samples
 ## Objective:
+Near-Infrared Spectroscopy (NIRS) is a non-destructive analytical technique used to measure a sample’s chemical composition by analyzing its absorption in the near-infrared region. This method relies on molecular vibrations to identify and quantify chemical compounds with minimal sample preparation.<br>
+NIRS is widely used for quality control in the food and beverage industry, including beer production. One key application is predicting the original extract (or gravity) of beer, which correlates with the final alcohol content after fermentation. This makes NIRS a valuable tool for monitoring and optimizing the brewing process.
 This project aims to develop a machine learning-based model to predict the original extract (gravity) of beer using Near-Infrared (NIR) spectroscopy data. The original extract concentration is a crucial quality parameter in the brewing industry, as it indicates the substrate potential for yeast fermentation and serves as a taxation parameter. By leveraging NIR spectral data and chemometric techniques, this project builds a predictive model to estimate the extract concentration accurately, enabling real-time quality control and process optimization in brewing.
 ## Datasets:
 The dataset used in this project is sourced from Kaggle and contains Near-Infrared (NIR) spectroscopy data for beer samples.<br>
 https://www.kaggle.com/datasets/robertoschimmenti/beer-nir/data <br>
 The dataset includes:
 * Wavelengths (1100–2500 nm, step size 2 nm): Representing the absorbance spectra of beer samples.
-* Original Extract Concentration (% Plato): The target variable, indicating the sugar content before fermentation.
+* Original Extract Concentration (% Plato): The target variable, indicating the concentration of extract mainly sugars derived from malt but also contain other soluble material in wort.<br>
+Every 1°P produce approximately 0.4% alcohol by volume , 12°P wort produces 5% alcohol depending on the extent to which sugars are fermented out.
+   
 * 80 Samples: With 576 spectral features per sample, corresponding to different wavelengths.
 
 ## Project Workflow
